@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2>نتائج البحث عن "{{ query }}"</h2>
+
+{% if results %}
+  <div class="products">
+    {% for product in results %}
+      <div class="product-card">
+        <!-- صورة المنتج -->
+        {% if product.image %}
+        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image">
+        {% else %}
+            <img src="{% static 'images/no-image.png' %}" alt="لا توجد صورة" class="product-image">
+        {% endif %}
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description|truncatewords:15 }}</p>
+        <p><strong>{{ product.price }} جنيه</strong></p>
+        
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>لا توجد نتائج مطابقة.</p>
+{% endif %}
+
+{% endblock %}

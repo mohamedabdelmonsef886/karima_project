@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "karima_project/wsgi.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "karima_project/wsgi.py"
+      }
+    ]
+  }
+  

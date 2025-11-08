@@ -1,0 +1,532 @@
+body { font-family: 'Arial', sans-serif; 
+        background-color: #f4f4f4; 
+        /* color: #333;  */
+        margin: 0; 
+        padding: 0; 
+        direction: rtl; 
+        /* background-image: url("../images/IMG-20251003-WA0095.jpg"); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+.top-navbar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    background: #565353;
+    
+}
+.top-navbar div {
+    position: relative;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+
+}
+/* ===== تنسيق اللوجو ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 50px;
+    top: 25px;
+
+}
+
+.logo img {
+    height: 70px; /* ارتفاع مناسب */
+    width: auto; /* الحفاظ على النسبة */
+    object-fit: contain;
+    border-radius: 8px;
+}
+.search-container {
+    flex: 1;
+    text-align: center;
+
+    padding: 5px 10px;
+
+}
+.search-input {
+    padding: 8px 15px;
+    width: 100%; /* 👈 هنا نتحكم في عرض شريط البحث */
+    max-width: 800px; /* أقصى عرض */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    transition: 0.3s;
+    background: #ffffff;
+}
+.search-btn {
+    position: absolute;
+    top: 49%;
+    left: 45vh;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+.search-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #aaa;
+    transition: 0.3s;
+}
+.search-btn:hover svg {
+    fill: #2c2121;
+}
+
+.contact-info {
+        display: flex;
+        left: 25px;
+        align-items: center;
+        gap: 8px; /* مسافة بين الأيقونة والرقم */
+        background-color: #f5f5f5; /* لون خفيف للخلفية (اختياري) */
+        padding: 5px 10px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+    
+.contact-info:hover {
+        background-color: #e2ffe9; /* لون عند المرور */
+    }
+    
+.whatsapp-icon {
+        fill: #25D366; /* لون أيقونة الواتساب */
+        width: 22px;
+        height: 22px;
+    }
+    
+.phone-number {
+        font-weight: bold;
+        color: #333;
+        direction: ltr; /* يخلي الرقم من اليسار لليمين */
+        font-size: 15px;
+    }
+    
+
+.bottom-navbar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: #565353;
+
+}
+.bottom-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+
+}
+.bottom-navbar a{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: beige;
+    padding: 0 28px;
+    font-size: 1em;
+    font-weight: 500;
+    
+}
+.bottom-navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #cd7d8d;
+    
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+/* عند المرور بالمؤشر */
+.bottom-navbar a:hover::after {
+    width: 60%; /* الطول اللي يوصل له */
+}
+.bottom-navbar a:hover {
+    color: #52cf0a;
+}
+main { padding: 20px; max-width: 1200px; margin: 20px auto; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.product-card { 
+        background: white;
+        border: 1px solid #ddd; 
+        padding: 10px; text-align: center; 
+        border-radius: 8px; 
+        box-shadow: 2px 2px 9px 3px #5b13c3;
+        transition: transform 0.3s ease;
+    }
+.product-card:hover {
+   
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px 4px #be0624;
+}  
+.product-card img { max-width: 100%; height: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: right; }
+form { margin: 20px 0; }
+input, button { padding: 10px; margin: 5px; }
+button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+a { color: #4CAF50; text-decoration: none; }
+.whatsapp-btn {
+    position: fixed;
+    right: 20px;             /* المسافة من اليمين */
+    bottom: 20px;            /* المسافة من الأسفل */
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: linear-gradient(180deg, #25D366 0%, #1DA851 100%); /* تدرج أخضر واتس */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+    z-index: 9999;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    border: solid 1px #f4f4f4;
+}
+.whatsapp-btn svg {
+    display: block;
+    width: 33px;
+    height: 52px;
+    fill: #ffffff;
+  }
+.whatsapp-btn:hover,
+.whatsapp-btn:focus {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 26px rgba(30, 32, 31, 0.3);
+    outline: none;
+  }
+
+  /* تعطيل النبض على أجهزة اللمس الصغيرة لتحسين الأداء */
+@media (min-width: 601px) {
+    .whatsapp-btn { animation: wa-pulse 4.5s ease-in-out infinite; }
+  }
+  
+  /* اختصارات للشاشات الصغيرة: تقليل الحجم والمسافات */
+@media (max-width: 420px) {
+    .whatsapp-btn {
+      right: 14px;
+      bottom: 14px;
+      width: 48px;
+      height: 48px;
+    }
+.whatsapp-btn svg { width: 20px; height: 20px; }
+  }
+  
+  /* سطوع عند الضغط (mobile feedback) */
+.whatsapp-btn:active {
+    transform: translateY(-2px) scale(0.98);
+    opacity: 0.98;
+  }
+/* باقي الـ CSS بتاعك (body, navbar, إلخ) يفضل زي ما هو... */
+
+/* تصميم السلايدر المصحح */
+.slider {
+    width: 90%; 
+    height: 380px; /* ارتفاع موحد، غيرته لـ 50vh عشان يناسب الشاشات */
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto; /* توسيط */
+    border-radius: 10px; /* لمسة جمالية */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ظل خفيف */
+  }
+  
+  .slides {
+    display: flex;
+    width: 400%; /* لثلاث صور: 100% × 3 */
+    height: 261%; /* ارتفاع كامل */
+    animation: slideAnimation 12s infinite ease-in-out; /* إضافة ease لتحريك أنعم */
+  }
+  
+  .slide {
+    width: 25%; /* كل slide 1/3 من الـ slides (بدل 100%، عشان يتوزع صح) */
+    height: 100%;
+    flex-shrink: 0;
+  }
+  
+  .slide img {
+    width: 100%; /* هنا التصحيح الرئيسي: 100% عشان تملأ الـ slide */
+    height: 100%; /* ارتفاع كامل للسلايدر */
+    object-fit: cover; /* يحافظ على نسبة الصورة بدون تشويه */
+    display: block; /* يمنع مسافات إضافية تحت الصورة */
+  }
+  
+  /* حركة التمرير (عدلت الـ keyframes شوية عشان تكون أنعم) */
+  @keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-25%); }
+    45% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    70% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(-75%); }
+  }
+  
+  /* إصلاح للـ RTL: اجعل السلايدر LTR عشان التحريك يروح شمال */
+  .slider {
+    direction: ltr; /* يلغي تأثير RTL على السلايدر بس */
+  }
+  
+  /* باقي الـ CSS بتاعك (whatsapp-btn, products-grid, إلخ) يفضل زي ما هو */
+/* باقي الـ CSS بتاعك (body, navbar, slider) يفضل زي ما هو... */
+
+/* تصميم الـ Collage Grid */
+.collage-grid {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    direction: rtl; /* للعربي، لكن النصوص بالإنجليزي هتكون LTR */
+  }
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 أعمدة متساوية */
+    grid-template-rows: auto auto; /* صفين */
+    gap: 20px; /* مسافة بين العناصر */
+    height: 80vh; /* ارتفاع كامل للشاشة، غير حسب الحاجة */
+  }
+  
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+.grid-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 26px rgba(30, 32, 31, 0.3);
+    outline: none;
+  }
+  
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* يحافظ على نسبة الصورة */
+    display: block;
+  }
+  
+  /* تخصيص الأحجام حسب التصميم (الأعلى: كبير، الأسفل: أصغر شوية) */
+.item-1, .item-2 {
+    grid-column: span 1;
+    grid-row: 1;
+    height: 50vh; /* ارتفاع نصف الشاشة */
+  }
+  
+.item-3, .item-4 {
+    grid-column: span 1;
+    grid-row: 2;
+    height: 40vh; /* أقصر شوية للأسفل */
+  }
+  
+  /* الصور الصغيرة في اليمين (زي التصميم) */
+.item-small, .item-small-2 {
+    grid-column: 3;
+    grid-row: span 2; /* تمتد على الصفين */
+    height: 100%; /* ارتفاع كامل */
+    width: auto;
+  }
+.naw {
+  position: relative;  
+  display: flex;
+  width: 83px;
+  height: 20px;
+  background: #c1bdb9;
+  justify-content: center;
+  align-content: center;
+  border: solid 1px #ebdbdb;
+  border-radius: 8px;
+  right: 25px;
+  top: 20px;
+  color: #033C05;
+}
+  
+  /* النصوص فوق الصور (overlay) */
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6); /* خلفية شفافة سوداء */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+.overlay-text h3 {
+    margin: 0;
+    direction: ltr; /* للنصوص الإنجليزية */
+  }
+  
+  /* Responsive للموبايل: يتحول لعمود واحد */
+@media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, auto);
+      gap: 10px;
+      height: auto;
+    }
+    
+.item-1, .item-2, .item-3, .item-4, .item-small, .item-small-2 {
+      grid-column: 1;
+      grid-row: auto;
+      height: 30vh;
+    }
+    
+.overlay-text {
+      font-size: 1em;
+      padding: 10px;
+    }
+  }
+  
+  /* ألوان خلفية للأقسام زي التصميم (اختياري) */
+.item-3 .overlay-text { background: rgba(139, 69, 19, 0.8); } /* بني للـ Knitwear */
+.item-4 .overlay-text { background: rgba(128, 0, 0, 0.8); } /* أحمر للـ Colors */
+
+/* ===== Footer Styles ===== */
+.site-footer {
+    background: linear-gradient(180deg,#413e3e 0%, #413e3e 100%);
+    color: #efeae3;
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    direction: rtl;
+  }
+  
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    gap: 30px;
+    align-items: start;
+    padding-bottom: 18px;
+  }
+  
+.footer-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+    margin-bottom: 10px;
+  }
+  
+.footer-col h4 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: #ffd96b; /* ذهبي فاتح */
+  }
+  
+.footer-col p, .footer-col li, .footer-col a, .footer-col label {
+    font-size: 14px;
+    color: #efeae3;
+    line-height: 1.6;
+  }
+  
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+.footer-col ul li { margin-bottom: 8px; }
+.footer-col ul li a {
+    color: #efeae3;
+    text-decoration: none;
+    transition: color .2s ease;
+  }
+.footer-col ul li a:hover { color: #ffd96b; }
+  
+.socials { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+.social-btn {
+    padding: 7px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.02);
+    color: #fff;
+  }
+.social-btn.whatsapp { background: linear-gradient(180deg,#25D366,#1DA851); color: #fff; border: none; }
+.social-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.4); }
+  
+.newsletter { margin-top: 14px; }
+.news-form { display:flex; gap:8px; margin-top:8px; }
+.news-form input {
+    flex:1;
+    padding:10px 12px;
+    border-radius:8px;
+    border:1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.02);
+    color: #fff;
+    outline: none;
+  }
+.news-form button {
+    padding: 10px 14px;
+    border-radius:8px;
+    border: none;
+    background: #ffd96b;
+    color: #111;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  /* bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.03);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+  }
+  
+#back-to-top {
+    display:inline-block;
+    padding:8px 12px;
+    border-radius:6px;
+    background: rgba(255,255,255,0.02);
+    color: #ffd96b;
+    text-decoration: none;
+    border:1px solid rgba(255,255,255,0.04);
+  }
+  
+  /* Responsive */
+@media (max-width: 900px) {
+    .footer-container { grid-template-columns: 1fr; gap:18px; text-align: right; padding: 20px; }
+    .footer-bottom { flex-direction: column-reverse; gap:8px; text-align: center; padding: 14px; }
+    .news-form { flex-direction: column; }
+    #back-to-top { display:inline-block; }
+  }
+.kk {
+    direction: ltr;
+}

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h1>مرحبا بك في كريمة</h1>
+<p>أفضل العبايات والزي الإسلامي بأسعار مناسبة.</p>
+
+<div class="slider">
+  <div class="slides">
+    <div class="slide">
+      <img src="{% static 'images/IMG-20251003-WA0095.jpg' %}" alt="صورة 1">
+    </div>
+    <div class="slide">
+      <img src="{% static 'images/IMG-20251003-WA0028.jpg' %}" alt="صورة 2"> 
+    </div>
+    <div class="slide">
+      <img src="{% static 'images/IMG-20251003-WA0052.jpg' %}" alt="صورة 3">    
+    </div>
+    <div class="slide">
+        <img src="{% static 'images/WhatsApp Image 2025-10-10 at 09.28.24_1c508dc6.jpg' %}" alt="صورة 4">    
+    </div>
+  </div>
+</div>
+<!-- التصميم الجديد: Collage Grid -->
+<section class="collage-grid">
+    <div class="grid-container">
+      <!-- الصف الأول: 3 أقسام (Classic Selections، Coats and Jackets، صورة صغيرة) -->
+      <div class="grid-item item-1">
+        <img src="{% static 'images/IMG-20251003-WA0015.jpg' %}" alt="Classic Selections">
+        <!-- <div class="overlay-text">
+          <h3>Classic Selections</h3>
+        </div> -->
+      </div>
+      
+      <div class="grid-item item-2">
+        <img src="{% static 'images/WhatsApp Image 2025-10-08 at 11.05.42_e2b5a8e3.jpg' %}" alt="Coats and Jackets">
+        <!-- <div class="overlay-text">
+          <h3>Coats and Jackets</h3>
+        </div> -->
+      </div>
+      
+      <div class="grid-item item-small">
+        <img src="{% static 'images/IMG-20251003-WA0012.jpg' %}" alt="Model">
+      </div>
+  
+      <!-- الصف الثاني: 3 أقسام (This Season's Knitwear Trend، Trend Colors، صورة صغيرة) -->
+      <div class="grid-item item-3">
+        <img src="{% static 'images/IMG-20251003-WA0045.jpg' %}" alt="This Season's Knitwear Trend">
+        <!-- <div class="overlay-text">
+          <h3>This Season's Knitwear Trend</h3>
+        </div> -->
+      </div>
+      
+      <div class="grid-item item-4">
+        <img src="{% static 'images/IMG-20251003-WA0017.jpg' %}" alt="Trend Colors of the Season">
+        <!-- <div class="overlay-text">
+          <h3>Trend Colors of the Season</h3>
+        </div> -->
+      </div>
+      
+      <div class="grid-item item-small-2">
+        <img src="{% static 'images/IMG-20251003-WA0057.jpg' %}" alt="Model 2">
+      </div>
+    </div>
+</section>
+<a class="naw" href="{% url 'products' %}">تسوق الآن</a>
+
+{% endblock %}

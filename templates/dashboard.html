@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>لوحة التحكم</h1>
+<h2>طلباتك</h2>
+<ul>
+    {% for order in orders %}
+    <li>طلب #{{ order.id }} - {{ order.total_price }} - {{ order.status }}</li>
+    {% endfor %}
+</ul>
+<h2>البحث في المنتجات</h2>
+<form method="get">
+    <input type="text" name="q" placeholder="ابحث في المنتجات">
+    <button type="submit">بحث</button>
+</form>
+<div class="products-grid">
+    {% for product in products %}
+    <div class="product-card">
+        <!-- نفس كود products.html -->
+    </div>
+    {% endfor %}
+</div>
+{% if user.is_superuser %}
+<h2>إدارة المنتجات (أضف/عدل من /admin/)</h2>
+{% endif %}
+{% endblock %}

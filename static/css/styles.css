@@ -530,3 +530,79 @@ a { color: #4CAF50; text-decoration: none; }
 .kk {
     direction: ltr;
 }
+
+/* تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .top-navbar, .bottom-navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .search-container {
+    order: 3;
+    padding: 5px;
+  }
+
+  .contact-info {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .bottom-navbar ul {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .bottom-navbar a {
+    padding: 10px;
+    display: block;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .slider {
+    width: 100%;
+    height: 220px;
+  }
+
+  .product-card {
+    margin: 10px auto;
+    width: 90%;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr 1fr; /* عمودين بدل 3 */
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* عمود واحد */
+  }
+
+  .product-card img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .slider {
+    height: 180px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .bottom-navbar a {
+    font-size: 14px;
+  }
+}

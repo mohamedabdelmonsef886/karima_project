@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-!!$if1l^*tsmo&*zyd^1o$n#-2p0_t=ab5+o8ea!&%x9$fa4bt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'localhost']
+ALLOWED_HOSTS = [
+        "127.0.0.1",
+        "localhost",
+        "karima-project.vercel.app",
+]
 
 
 # Application definition
@@ -122,7 +126,7 @@ USE_TZ = True
 # static files settings
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'products', 'accounts', 'cart', 'pages', 'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

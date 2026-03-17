@@ -1,4 +1,7 @@
-echo "🚀 بدء البناء على Vercel"
+echo "🚀 build started"
 pip install -r requirements.txt
+echo "📦 collect static..."
 python manage.py collectstatic --noinput
-echo "✅ انتهى البناء"
+echo "📁 show staticfiles"
+ls staticfiles/css
+echo "✅ done"

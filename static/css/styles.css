@@ -30,22 +30,22 @@ body {
     padding:10px 20px;
 }
 .menu-toggle {
-  margin-right: 65px;
-  display: none;
+    margin-right: 65px;
+    display: none;
 }
 .menu-toggle i {
-  font-size:22px;
-  margin-left:15px;
-  cursor:pointer;
-  
+    font-size:22px;
+    margin-left:15px;
+    cursor:pointer;
+    
 }
 .top-navbar .menu-toggle.menu-active::before{
-  content: '';
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #010101b8 transparent;
-  position: absolute;
-  bottom: -9px;
+    content: '';
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #010101b8 transparent;
+    position: absolute;
+    bottom: -9px;
 }
 .logo {
     display: flex;

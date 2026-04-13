@@ -5,9 +5,9 @@
     <input type="text" name="q" placeholder="ابحث...">
     <button type="submit">بحث</button>
 </form>
-<div class="products-grid">
+<div class="products-grid" id="productsContainer">
     {% for product in products %}
-    <div class="product-card">
+    <div class="product-card" data-name="{{ product.name }}">
         <img src="{{ product.image.url }}" alt="{{ product.name }}">
         <h3>{{ product.name }}</h3>
         <p>{{ product.description|truncatewords:10 }}</p>
